@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true">
+<!--default-lazy-init="true"将配置文件中所有的bean都设置为懒加载模式>-->
+
+    <bean class="wangzhe.lazyloading.LazyBean" id="bean" lazy-init="true"/>
+
+</beans>

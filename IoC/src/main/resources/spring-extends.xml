@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- abstract="true"为了告诉spring并不是一个真正需要实例化的bean，只是一个定义性质的bean-->
+    <bean class="wangzhe.Extends.ParentClass" abstract="true" id="parentClass">
+        <property name="attribute1" value="attribute1"/>
+        <property name="attribute2" value="attribute2"/>
+        <property name="attribute3" value="attribute3"/>
+    </bean>
+
+    <bean class="wangzhe.Extends.Class1" id="class1" parent="parentClass">
+        <property name="attribute4" value="attribute4"/>
+        <property name="attribute5" value="attribute5"/>
+    </bean>
+
+    <bean class="wangzhe.Extends.Class2" id="class2" parent="parentClass">
+        <property name="attribute7" value="attribute7"/>
+        <property name="attribute8" value="attribute8"/>
+    </bean>
+</beans>
